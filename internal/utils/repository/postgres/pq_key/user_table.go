@@ -1,4 +1,4 @@
-package pq_keys
+package pq_key
 
 import "github.com/lib/pq"
 
@@ -7,7 +7,7 @@ var UserTableKeys = userTable{
 	Columns: userTableColumns{
 		Id:     pq.QuoteIdentifier("id"),
 		Email:  pq.QuoteIdentifier("email"),
-		Name:   pq.QuoteIdentifier("name"),
+		Login:  pq.QuoteIdentifier("login"),
 		Pass:   pq.QuoteIdentifier("password"),
 		Locale: pq.QuoteIdentifier("locale"),
 		Date:   pq.QuoteIdentifier("date"),
@@ -21,7 +21,7 @@ type userTable struct {
 type userTableColumns struct {
 	Id     string
 	Email  string
-	Name   string
+	Login  string
 	Pass   string
 	Locale string
 	Date   string
